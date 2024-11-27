@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+    
+}
+#page-warpper{
+    position: relative;
+}
+header{
+    background-color: #eef;
+}
+#header li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+#hero{
+    background-color: #eeaa;
+}
+#email{
+    border-radius: 220px;
+    padding-left: 1rem;
+    margin:25px 0px 20px 0px;
+}
+.button{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px ;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#space{
+    padding: 10px;
+}
