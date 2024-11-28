@@ -1,41 +1,223 @@
-*{
+/* Resetting some default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #eee;
-    
+
+body {
+    background-color: #f4f4f9; /* Fondo más suave */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
-#page-warpper{
-    position: relative;
-}
-header{
-    background-color: #eef;
-}
-#header li{
-    list-style: none;
-}
-a{
-    color: #000;
+
+a {
     text-decoration: none;
+    color: inherit;
 }
-#hero{
-    background-color: #eeaa;
+
+ul {
+    list-style-type: none;
 }
-#email{
-    border-radius: 220px;
-    padding-left: 1rem;
-    margin:25px 0px 20px 0px;
+
+#page-warpper {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    max-width: 1800px;
 }
-.button{
-    background-color: green;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 15px 10px 15px ;
-    font-size: 1rem;
-    font-weight: bold;
+
+/* Header Styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-#space{
+
+#logo img {
+    width: 150px;
+    height: auto;
+}
+
+#nav-bar {
+    text-align: right;
+}
+
+#nav-bar ul {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6347; /* Cambia de color al pasar el mouse */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    margin: 50px 0;
+    background-color: #28a745;
+    padding: 30px 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form input[type="email"] {
     padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 400px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+form .button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form .button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Animación al pasar el cursor */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Video Styles */
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #ff6347;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#footer ul li a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#footer ul li a:hover {
+    color: #ff6347;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #form {
+        flex-direction: column;
+    }
+
+    #email, #submit {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 15px 10px;
+    }
+
+    #logo img {
+        width: 120px;
+    }
+
+    #hero h2 {
+        font-size: 1.6rem;
+    }
+
+    #footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p, ul li {
+        font-size: 0.9rem;
+    }
 }
